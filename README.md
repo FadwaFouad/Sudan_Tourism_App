@@ -1,11 +1,18 @@
 # SudanTourApp
 
-bueatiful app about tourism in sudan.
+beautiful app about tourism in sudan.take a journey in fantastic country.
 
-# App
+# App Features
+. App view differnt places depends on city.
+. for every city, App view Resturants, Hotels,and Common Places.
+. Users can show  contents on Arabic and English Languages.
+. Users can view details about city by open Wikipidia page.
 
-
+# Tools & technique
+SudanTourApp developed using Flutter framework from Google and Vs code Editor. The app uses flutter widgets to get beautiful design. Also, App use l10n to add multiaple languages.Webview used to access web throuh app.
 
 #  Screens
 
-![image](https://user-images.githubusercontent.com/24944117/119261441-230c2900-bbe0-11eb-8abc-0cf8003e425a.png)    ![image](https://user-images.githubusercontent.com/24944117/119261446-27384680-bbe0-11eb-90e1-e00fb8ebcc4a.png)    ![image](https://user-images.githubusercontent.com/24944117/119261452-2bfcfa80-bbe0-11eb-8dce-1db56f7ba744.png)
+![image](https://user-images.githubusercontent.com/24944117/119261441-230c2900-bbe0-11eb-8abc-0cf8003e425a.png) 
+
+To show more screens, see Screenshuts folder.
