@@ -15,7 +15,6 @@ class PreviewSlider extends StatelessWidget {
 
     return CarouselSlider(
       options: CarouselOptions(
-          //height: 200,
           initialPage: 0,
           autoPlay: true,
           autoPlayAnimationDuration: Duration(milliseconds: 1000),
@@ -71,7 +70,12 @@ class SliderItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(preview.place, style: cons.textTheme.headline3),
+                  Text(
+                      Localizations.localeOf(context) ==
+                              Locale.fromSubtags(languageCode: 'ar')
+                          ? preview.placeAr
+                          : preview.place,
+                      style: cons.textTheme.headline3),
                   SizedBox(
                     width: 15,
                   ),
@@ -86,7 +90,10 @@ class SliderItem extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        preview.city,
+                        Localizations.localeOf(context) ==
+                                Locale.fromSubtags(languageCode: 'ar')
+                            ? preview.cityAr
+                            : preview.city,
                         style: cons.textTheme.headline4,
                       ),
                     ],

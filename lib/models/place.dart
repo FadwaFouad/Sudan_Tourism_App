@@ -1,10 +1,10 @@
 class Place {
   final int id;
-  final String name;
+  final Map<String, Object> name;
   final double rating;
   final String reviews;
   final String description;
-  final String location;
+  final Map<String, Object> location;
   final String image;
 
   Place({

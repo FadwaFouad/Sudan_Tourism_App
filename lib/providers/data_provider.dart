@@ -14,11 +14,14 @@ class DataProviders with ChangeNotifier {
   List<Preview> getPreviewData() {
     final list = PREVIEW_DATA.map((data) {
       return Preview(
-          id: data['id'],
-          city: data['city'],
-          place: data['place'],
-          image: data['image'],
-          isFav: data['fav']);
+        id: data['id'],
+        city: data['city'],
+        place: data['place'],
+        image: data['image'],
+        isFav: data['fav'],
+        cityAr: data['city_ar'],
+        placeAr: data['place_ar'],
+      );
     }).toList();
 
     return list;
@@ -65,6 +68,7 @@ class DataProviders with ChangeNotifier {
       return City(
           id: data['id'],
           name: data['name'],
+          url: data['url'],
           rating: data['rating'],
           reviews: data['reviews'],
           description: data['description'],

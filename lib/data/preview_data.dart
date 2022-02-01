@@ -5,6 +5,8 @@ const PREVIEW_DATA = [
     'city': 'Khartoum',
     'place': 'Corinthia Hotel',
     'image': 'assets/images/khartoumHotel.jpg',
+    'city_ar': 'الخرطوم',
+    'place_ar': 'فندق كورنثيا',
   },
   {
     'id': '2',
@@ -12,6 +14,8 @@ const PREVIEW_DATA = [
     'city': 'Port Sudan',
     'place': 'Coral reefs',
     'image': 'assets/images/reefs.jpg',
+    'city_ar': 'الشعب المرجانية',
+    'place_ar': 'البورتسودان',
   },
   {
     'id': '3',
@@ -19,6 +23,8 @@ const PREVIEW_DATA = [
     'city': 'Marawi',
     'place': 'Al- Bajrawia',
     'image': 'assets/images/baj.jpg',
+    'city_ar': 'مروي',
+    'place_ar': 'البجرواية',
   },
   {
     'id': '4',
@@ -26,5 +32,7 @@ const PREVIEW_DATA = [
     'city': 'Darfur',
     'place': 'Jebel Marra',
     'image': 'assets/images/mara.jpg',
+    'city_ar': 'دارفور',
+    'place_ar': 'جبل مرة',
   },
 ];

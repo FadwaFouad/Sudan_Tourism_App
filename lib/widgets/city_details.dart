@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../models/city.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../utils/constants.dart' as cons;
+
+import '../models/city.dart';
+import '../screens/webview_screen.dart';
 
 class CityDetails extends StatelessWidget {
   final City city;
@@ -19,28 +22,17 @@ class CityDetails extends StatelessWidget {
         ),
       ],
     );
-    // return RatingBar.builder(
-    //   initialRating: rating,
-    //   minRating: 1,
-    //   direction: Axis.horizontal,
-    //   allowHalfRating: true,
-    //   itemCount: 5,
-    //   itemPadding: EdgeInsets.symmetric(horizontal: 4),
-    //   itemBuilder: (ctx, _) => Icon(
-    //     Icons.star,
-    //     color: Theme.of(ctx).primaryColor,
-    //   ),
-    //   onRatingUpdate: (rating) {},
-    // );
   }
 
   @override
   Widget build(BuildContext context) {
+    final lang = Localizations.localeOf(context).languageCode;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          city.name,
+          city.name[lang],
           style: cons.textTheme.headline2,
         ),
         SizedBox(
@@ -51,7 +43,7 @@ class CityDetails extends StatelessWidget {
             buildRatingWidget(city.rating, context),
             SizedBox(width: 10),
             Text(
-              '( ${city.reviews} Reviews)',
+              '( ${city.reviews} ${AppLocalizations.of(context).reviews})',
               style: cons.textTheme.bodyText1,
             ),
           ],
@@ -60,29 +52,23 @@ class CityDetails extends StatelessWidget {
           height: 10,
         ),
         Text(
-          city.description,
+          city.description[lang],
           style: cons.textTheme.bodyText2,
         ),
         SizedBox(
           height: 2,
         ),
-        Text(
-          'Read more >',
-          style: cons.textTheme.bodyText2.copyWith(
-            color: Theme.of(context).primaryColor,
-            fontWeight: FontWeight.bold,
+        InkWell(
+          onTap: () => Navigator.of(context)
+              .pushNamed(WebviewScreen.ROUTE_NAME, arguments: city.url[lang]),
+          child: Text(
+            AppLocalizations.of(context).readMore,
+            style: cons.textTheme.bodyText2.copyWith(
+              color: Theme.of(context).primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-
-        // ReadMoreText(
-        //   city.description,
-        //   trimLines: 2,
-        //   colorClickableText: Theme.of(context).primaryColor,
-        //   trimMode: TrimMode.Line,
-        //   trimCollapsedText: cons.STRING_TEXT_COLL,
-        //   trimExpandedText: cons.STRING_TEXT_EXPAN,
-        //   moreStyle: cons.TEXT_THEME.bodyText1,
-        // ),
       ],
     );
   }

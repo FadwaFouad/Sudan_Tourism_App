@@ -26,6 +26,7 @@ class _CitySliderState extends State<CitySlider> {
 
   @override
   Widget build(BuildContext context) {
+    final currentLang = Localizations.localeOf(context).languageCode;
     return Stack(
       children: [
         CarouselSlider(
@@ -50,7 +51,8 @@ class _CitySliderState extends State<CitySlider> {
         ),
         Positioned(
           top: 10,
-          left: 10,
+          left: currentLang == 'en' ? 10 : null,
+          right: currentLang == 'ar' ? 10 : null,
 
           child: Container(
             width: 30,
@@ -67,7 +69,8 @@ class _CitySliderState extends State<CitySlider> {
         ),
         Positioned(
           top: 10,
-          right: 10,
+          left: currentLang == 'ar' ? 10 : null,
+          right: currentLang == 'en' ? 10 : null,
           child: IconButton(
             icon: Icon(
               Icons.more_horiz,

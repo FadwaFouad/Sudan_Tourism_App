@@ -1,0 +1,20 @@
+{
+    "helloWorld": "مرحبا بك في السودان",
+    "discover": "   اكتشف",
+    "hotSpot": "الأماكن الشائعة",
+    "food": "الأكل الشعبي",
+    "culure": "العادات السودانية",
+    "letGo": "انطلق",
+    "travelGuide": "دليل الرحلة",
+    "reviews": "تقييم",
+    "readMore": "اقرأ المزيد >",
+    "khartoum": "   الخرطوم",
+    "search": "بحث ...",
+    "journey": "تمتع بجولة",
+    "setting": "الاعدادات",
+    "lang": "تغيير اللغة",
+
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    }
+}

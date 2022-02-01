@@ -1,0 +1,20 @@
+{
+    "helloWorld": "Hello World!",
+    "discover": "  DISCOVER",
+    "hotSpot": "Hot Spots",
+    "food": "Traditional Foods",
+    "culure": "Sudanese Culures",
+    "letGo": "Lets Go",
+    "travelGuide": "Travel Guide",
+    "reviews": "Reviews",
+    "readMore": "Read more >",
+    "khartoum": "   Khartoum",
+    "search": "Search...",
+    "journey": "Take Journy",
+    "setting": "Setting",
+    "lang": "Change Languages",
+  
+    "@helloWorld": {
+      "description": "The conventional newborn programmer greeting"
+    }
+}

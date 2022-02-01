@@ -36,6 +36,7 @@ class ListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final lang = Localizations.localeOf(context).languageCode;
 
     return Container(
       width: size.width * widthRatio,
@@ -75,8 +76,6 @@ class ListItem extends StatelessWidget {
               ],
             ),
           ),
-          // name
-
           Card(
             margin: EdgeInsets.all(0),
             elevation: 5,
@@ -98,7 +97,7 @@ class ListItem extends StatelessWidget {
                 ),
                 padding: EdgeInsets.all(5),
                 child: Text(
-                  item.name,
+                  item.name[lang],
                   style: cons.textTheme.headline4.copyWith(
                     fontWeight: FontWeight.w500,
                   ),

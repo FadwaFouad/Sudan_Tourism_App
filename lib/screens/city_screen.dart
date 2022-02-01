@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../utils/constants.dart' as cons;
 
 import '../providers/data_provider.dart';
@@ -35,20 +36,20 @@ class CityScreen extends StatelessWidget {
               )),
           Padding(
             padding: const EdgeInsets.all(10),
-            child: Text('Travel Guide', style: cons.textTheme.headline2),
+            child: Text(AppLocalizations.of(context).travelGuide,
+                style: cons.textTheme.headline2),
           ),
           SizedBox(height: 5),
           Container(
             width: size.width,
             margin: EdgeInsets.all(10),
-            //height: size.height * 0.70,
             child: CityTravelOptions(),
           ),
           SizedBox(height: 5),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ElevatedButton(
-              child: Text(cons.STRING_BUTTON_TRAVEL),
+              child: Text(AppLocalizations.of(context).letGo),
               onPressed: () =>
                   Navigator.of(context).pushNamed(OptionsScreen.ROUTE_NAME),
             ),

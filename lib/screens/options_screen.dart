@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:sudan_tour_app/utils/constants.dart' as cons;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:provider/provider.dart';
 import '../providers/data_provider.dart';
@@ -31,6 +32,8 @@ class _OptionsScreenState extends State<OptionsScreen> {
     final places =
         Provider.of<DataProviders>(context, listen: false).getPlacesList();
 
+    final lang = Localizations.localeOf(context).languageCode;
+
     return DefaultTabController(
       length: optionsList.length,
       child: Scaffold(
@@ -50,7 +53,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
             SizedBox(height: 10),
             //title
             Text(
-              '  Khartoum',
+              AppLocalizations.of(context).khartoum,
               style: cons.textTheme.headline1.copyWith(
                 letterSpacing: 3,
               ),
@@ -75,7 +78,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
                   ),
                   SizedBox(width: 5),
                   Text(
-                    'Search... ',
+                    AppLocalizations.of(context).search,
                     style: cons.textTheme.bodyText1.copyWith(
                       color: cons.COLOR_GREY,
                     ),
@@ -110,7 +113,7 @@ class _OptionsScreenState extends State<OptionsScreen> {
                                 width: 3,
                               ),
                               Text(
-                                option.name,
+                                option.name[lang],
                                 style: cons.textTheme.headline3.copyWith(),
                               ),
                             ],

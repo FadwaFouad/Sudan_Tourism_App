@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart' as cons;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WelcomeBar extends StatelessWidget {
   @override
@@ -11,7 +12,8 @@ class WelcomeBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            cons.STRING_WELCOME,
+            //cons.STRING_WELCOME,
+            AppLocalizations.of(context).helloWorld,
             style: cons.textTheme.headline1.copyWith(
               letterSpacing: 2,
             ),

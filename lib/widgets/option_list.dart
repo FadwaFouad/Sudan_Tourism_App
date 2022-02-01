@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart' as cons;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../models/place.dart';
 
@@ -39,7 +40,7 @@ class OptionItem extends StatelessWidget {
         ),
         SizedBox(width: 5),
         Text(
-          '( $review Reviews)',
+          '( $review ${AppLocalizations.of(ctx).reviews})',
           style: cons.textTheme.bodyText2.copyWith(
             fontWeight: FontWeight.w400,
           ),
@@ -71,11 +72,11 @@ class OptionItem extends StatelessWidget {
 
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final lang = Localizations.localeOf(context).languageCode;
+
     return Container(
       height: size.height * heightRatio,
       width: size.width,
-      // padding: EdgeInsets.all(5),
-
       child: Card(
         elevation: 5,
         margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
@@ -102,37 +103,29 @@ class OptionItem extends StatelessWidget {
                 flex: 2,
                 child: Padding(
                   padding: EdgeInsets.all(5),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FittedBox(
-                        child: Text(
-                          place.name,
-                          style: cons.textTheme.headline3,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FittedBox(
+                          child: Text(
+                            place.name[lang],
+                            style: cons.textTheme.headline3,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      // Flexible(
-                      //   child: Text(
-                      //     place.description,
-                      //     style: cons.textTheme.bodyText2.copyWith(
-                      //       color: cons.COLOR_GREY,
-                      //     ),
-                      //     overflow: TextOverflow.ellipsis,
-                      //     maxLines: 1,
-                      //   ),
-                      // ),
-                      FittedBox(
-                          child: buildReviewWidget(
-                              place.rating, place.reviews, context)),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      FittedBox(child: buildLocWidget(place.location)),
-                    ],
+                        SizedBox(
+                          height: 5,
+                        ),
+                        FittedBox(
+                            child: buildReviewWidget(
+                                place.rating, place.reviews, context)),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        FittedBox(child: buildLocWidget(place.location[lang])),
+                      ],
+                    ),
                   ),
                 ),
               ),

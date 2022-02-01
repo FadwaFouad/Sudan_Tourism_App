@@ -36,6 +36,8 @@ class OptionItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final lang = Localizations.localeOf(context).languageCode;
+
     return Stack(
       children: [
         Container(
@@ -69,7 +71,7 @@ class OptionItem extends StatelessWidget {
                   color: cons.COLOR_WHITE,
                 ),
                 Text(
-                  item.name,
+                  item.name[lang],
                   style: cons.textTheme.headline5,
                 ),
               ],
@@ -80,34 +82,3 @@ class OptionItem extends StatelessWidget {
     );
   }
 }
-
-//  Container(
-//   width: 20,
-//   height: 20,
-//   child: Column(
-//     //new
-//     mainAxisSize: MainAxisSize.min,
-//     mainAxisAlignment: MainAxisAlignment.center,
-//     crossAxisAlignment: CrossAxisAlignment.center,
-//     children: [
-//       Icon(
-//         item.icon,
-//         size: 30,
-//         color: cons.COLOR_WHITE,
-//       ),
-//       Text(
-//         item.name,
-//         style: cons.textTheme.headline5,
-//       ),
-//     ],
-//   ),
-//     // ),
-//   ),
-// ),
-// decoration: BoxDecoration(
-//     color: Colors.grey,
-//     image: DecorationImage(
-//       image: AssetImage(item.image),
-//       fit: BoxFit.cover,
-//     ),
-//     borderRadius: BorderRadius.circular(10)),
