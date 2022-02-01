@@ -1,16 +1,11 @@
 # SudanTourApp
 
-A new Flutter project.
+bueatiful app about tourism in sudan.
 
-## Getting Started
+# App
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+#  Screens
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://user-images.githubusercontent.com/24944117/119261441-230c2900-bbe0-11eb-8abc-0cf8003e425a.png)    ![image](https://user-images.githubusercontent.com/24944117/119261446-27384680-bbe0-11eb-90e1-e00fb8ebcc4a.png)    ![image](https://user-images.githubusercontent.com/24944117/119261452-2bfcfa80-bbe0-11eb-8dce-1db56f7ba744.png)
