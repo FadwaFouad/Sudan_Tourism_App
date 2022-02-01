@@ -4,8 +4,11 @@ beautiful app about tourism in sudan.take a journey in fantastic country.
 
 # App Features
 . App view differnt places depends on city.
+
 . for every city, App view Resturants, Hotels,and Common Places.
+
 . Users can show  contents on Arabic and English Languages.
+
 . Users can view details about city by open Wikipidia page.
 
 # Tools & technique
