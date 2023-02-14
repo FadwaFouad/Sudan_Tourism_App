@@ -9,10 +9,10 @@ beautiful app about tourism in sudan.take a journey in fantastic country.
 
 . Users can show  contents on Arabic and English Languages.
 
-. Users can view details about city by open Wikipidia page.
+. Users can view details about city by open Wikipidia web page.
 
 # Tools & technique
-SudanTourApp developed using Flutter framework from Google and Vs code Editor. The app uses flutter widgets to get beautiful design. Also, App use l10n to add multiaple languages.Webview used to access web throuh app.
+SudanTourApp developed using Flutter framework. The App show content in Arabic and English Languages, Webview lib used to access web throuh app, and use provider as state management.
 
 #  Screens
 
